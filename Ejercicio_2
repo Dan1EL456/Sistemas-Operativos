@@ -1,0 +1,195 @@
+/*
+Developer: Daniel Alexander Gomez
+Sketch descripción: 2.) Binary numbers
+*/
+
+
+const int VERDE = 13;
+const int AMARILLO =12;
+const int AZUL =11;
+const int BLANCO =10;
+const int ROJO = 9;
+
+
+void setup() 
+{
+  pinMode(VERDE, OUTPUT);
+  pinMode(AMARILLO, OUTPUT); 
+  pinMode(AZUL, OUTPUT);
+  pinMode(BLANCO, OUTPUT); 
+  pinMode(ROJO, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() 
+{
+  //cero 00000
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, LOW);
+  Serial.println("0");
+  delay(2000);
+  //uno 00001
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("1");
+  delay(2000);
+  //dos 00010
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, LOW);
+  Serial.println("2");
+  delay(2000);
+  //tres 00011
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("3");
+  delay(2000);
+  //cuatro 00100
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, LOW);
+  Serial.println("4");
+  delay(2000);
+  //cinco 00101
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("5");
+  delay(2000);
+  //seis 00110
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, LOW);
+  Serial.println("6");
+  delay(2000);
+  // siete 00111
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("7");
+  delay(2000);
+  // ocho 01000
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, LOW);
+  Serial.println("8");
+  delay(2000);
+  // nueve 01001
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("9");
+  delay(2000);
+  // diez 01010
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, LOW);
+  Serial.println("10");
+  delay(2000);
+  // once 01011
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("11");
+  delay(2000);
+  // doce 01100
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, LOW);
+  Serial.println("12");
+  delay(2000);
+  // trece 01101
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("13");
+  delay(2000);
+  // catorce 01110
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, LOW);
+  Serial.println("14");
+  delay(2000);
+  // quince 01111
+  digitalWrite(VERDE, LOW);
+  digitalWrite(AMARILLO, HIGH);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("15");
+  delay(2000);
+  // dieciseis 10000
+  digitalWrite(VERDE, HIGH);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, LOW);
+  Serial.println("16");
+  delay(2000);
+  // diecisiete 10001
+  digitalWrite(VERDE, HIGH);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("17");
+  delay(2000);
+  // dieciocho 10010
+  digitalWrite(VERDE, HIGH);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, LOW);
+  Serial.println("18");
+  delay(2000);
+  // diecinueve 10011
+  digitalWrite(VERDE, HIGH);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, LOW);
+  digitalWrite(BLANCO, HIGH);
+  digitalWrite(ROJO, HIGH);
+  Serial.println("19");
+  delay(2000);
+  // veinte 10100
+  digitalWrite(VERDE, HIGH);
+  digitalWrite(AMARILLO, LOW);
+  digitalWrite(AZUL, HIGH);
+  digitalWrite(BLANCO, LOW);
+  digitalWrite(ROJO, LOW);
+  Serial.println("20");
+  delay(2000);
+  
+} 
