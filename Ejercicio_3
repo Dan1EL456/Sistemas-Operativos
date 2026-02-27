@@ -1,0 +1,106 @@
+/*
+Developer: Daniel Alexander Gomez
+Sketch descripción: 3.) 
+*/
+
+const int rojo = 13;
+const int amarillo = 12;
+const int verde = 11;
+const int pulsador = 10;
+
+int estado = 0;   // empieza en semáforo
+int fase = 0;
+
+unsigned long tiempo = 0;
+bool luz = false;
+
+void setup()
+{
+ pinMode(rojo,OUTPUT);
+ pinMode(amarillo,OUTPUT);
+ pinMode(verde,OUTPUT);
+ pinMode(pulsador,INPUT_PULLUP);
+}
+
+void loop()
+{
+
+// BOTON
+if(digitalRead(pulsador)==LOW)
+{
+ estado++;
+ if(estado>4) estado=0;
+ delay(200); // rebote simple, es necesario ponerlo solo aqui
+}
+
+
+// MODO SEMAFORO, inicia asi al correrlo
+if(estado==0)
+{
+ if(millis()-tiempo>1500)
+ {
+   tiempo=millis();
+   fase++;
+   if(fase>3) fase=0;
+ }
+
+ if(fase==0) digitalWrite(rojo,HIGH);
+ else digitalWrite(rojo,LOW);
+
+ if(fase==1 || fase==3) digitalWrite(amarillo,HIGH);
+ else digitalWrite(amarillo,LOW);
+
+ if(fase==2) digitalWrite(verde,HIGH);
+ else digitalWrite(verde,LOW);
+}
+
+
+// SOLO VERDE, primera pulsación
+if(estado==1)
+{
+ digitalWrite(rojo,LOW);
+ digitalWrite(amarillo,LOW);
+ digitalWrite(verde,HIGH);
+}
+
+
+// TODOS PARPADEAN, segunda pulsación
+if(estado==2)
+{
+ if(millis()-tiempo>500)
+ {
+   tiempo=millis();
+   luz=!luz;
+ }
+
+ digitalWrite(rojo,luz);
+ digitalWrite(amarillo,luz);
+ digitalWrite(verde,luz);
+}
+
+
+// AMARILLO PARPADEA, tercera pulsación
+if(estado==3)
+{
+ if(millis()-tiempo>500)
+ {
+   tiempo=millis();
+   luz=!luz;
+ }
+
+ digitalWrite(rojo,LOW);
+ digitalWrite(verde,LOW);
+ digitalWrite(amarillo,luz);
+}
+
+
+// APAGADO, 4 pulsación y al dar la 5 pasa al estado de semaforo
+// y se repite el ciclo
+if(estado==4)
+{
+ digitalWrite(rojo,LOW);
+ digitalWrite(amarillo,LOW);
+ digitalWrite(verde,LOW);
+}
+
+}
